@@ -2,6 +2,7 @@
 
 MICRO_FLAG=-DSTM32F446xx
 STM32CUBEF4_FOLDER="STM32CubeF4"
+STM32CUBEF4_TAG="v1.28.1"
 STM32CUBEF4_REPO="https://github.com/STMicroelectronics/$STM32CUBEF4_FOLDER"
 
 OBJ_FOLDER="obj"
@@ -28,7 +29,7 @@ mkdir -p $BUILD_DIR/$ASM_LIST_FOLDER
 # DOWNLOAD STM32CUBE MX
 if [ ! -d "$STM32CUBEF4_FOLDER" ]; then
     echo "$STM32CUBEF4_FOLDER does not exist. Cloning from $STM32CUBEF4_REPO..."
-    git clone $STM32CUBEF4_REPO 
+    git clone --depth 1 --branch $STM32CUBEF4_TAG $STM32CUBEF4_REPO
 fi
 
 INCLUDES="-I./$STM32CUBEF4_FOLDER/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I./$STM32CUBEF4_FOLDER/Drivers/CMSIS/Core/Include"
