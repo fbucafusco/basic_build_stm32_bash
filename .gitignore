@@ -1,4 +1,7 @@
 
 build/
-
 STM32CubeF4/
+*.out
+*.elf
+*.map
+.vscode
