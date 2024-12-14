@@ -36,7 +36,7 @@ INCLUDES="-I./$STM32CUBEF4_FOLDER/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I./
 
 CPP_FILES=(
     main.cpp
-    functions.cpp
+    # functions.cpp
 )
 
 C_FILES=(
